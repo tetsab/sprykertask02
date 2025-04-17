@@ -61,6 +61,7 @@ use SprykerShop\Yves\SalesReturnPage\Plugin\Router\SalesReturnPageRouteProviderP
 use SprykerShop\Yves\StorageRouter\Plugin\Router\StorageRouterPlugin;
 use SprykerShop\Yves\WishlistPage\Plugin\Router\WishlistPageRouteProviderPlugin;
 use Pyz\Yves\TrainingPage\Plugin\Router\TrainingPageRouteProviderPlugin;
+use Pyz\Yves\AntelopePage\Plugin\Router\AntelopePageRouteProviderPlugin;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -76,7 +77,15 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             new YvesDevelopmentRouterPlugin(),
         ];
     }
-
+ /**
+     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     */
+    protected function getRouteProviderPlugins(): array
+    {
+        return [
+            new AntelopePageRouteProviderPlugin(),
+        ];
+    }
     /**
      * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
