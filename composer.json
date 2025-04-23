@@ -263,7 +263,8 @@
             "Orm\\": "src/Orm/",
             "Pyz\\": "src/Pyz/",
             "Install\\": "src/Install/",
-            "SprykerConfig\\": "src/SprykerConfig/"
+            "SprykerConfig\\": "src/SprykerConfig/",
+            "Pyz\\Yves\\ProductSocialWidget\\": "src/Pyz/Yves/ProductSocialWidget/"
         }
     },
     "autoload-dev": {

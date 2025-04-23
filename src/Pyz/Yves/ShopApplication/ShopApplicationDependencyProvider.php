@@ -10,6 +10,7 @@ namespace Pyz\Yves\ShopApplication;
 use Pyz\Yves\ProductRelationWidget\Widget\UpSellingProductsWidget;
 use Pyz\Yves\ProductReviewWidget\Widget\ProductDetailPageReviewWidget;
 use Pyz\Yves\ProductSetWidget\Widget\ProductSetIdsWidget;
+use Pyz\Yves\ProductSocialWidget\Widget\ProductSocialWidget;
 use Spryker\Yves\ErrorHandler\Plugin\Application\ErrorHandlerApplicationPlugin;
 use Spryker\Yves\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
 use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;
@@ -114,6 +115,7 @@ use SprykerShop\Yves\StoreWidget\Widget\StoreSwitcherWidget;
 use SprykerShop\Yves\TabsWidget\Widget\FullTextSearchTabsWidget;
 use SprykerShop\Yves\WebProfilerWidget\Plugin\Application\WebProfilerApplicationPlugin;
 use SprykerShop\Yves\WishlistWidget\Widget\WishlistMenuItemWidget;
+use Spryker\Yves\Kernel\Container;
 
 /**
  * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
@@ -213,6 +215,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             CartSummaryHideTaxAmountWidget::class,
             ComparisonProductTogglerComparisonListWidget::class,
             LinkToProductComparisonListWidget::class,
+            ProductSocialWidget::class,
         ];
     }
 
@@ -234,6 +237,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             new LogoutInvalidatedCustomerFilterControllerEventHandlerPlugin(),
+        ];
+    }
+
+    public function getYvesWidgets(Container $container): array
+    {
+        return [
+            ProductSocialWidget::class,
         ];
     }
 

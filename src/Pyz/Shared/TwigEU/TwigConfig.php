@@ -1,12 +1,12 @@
 <?php
 
-namespace Pyz\Shared\TwigDE;
+namespace Pyz\Shared\TwigEU;
 use \Spryker\Shared\Twig\TwigConfig as SprykerConfig;
 class TwigConfig extends  SprykerConfig
 {
 
     public function getYvesThemeName(): string
     {
-       return 'green';
+       return 'default'; // theme color
     }
 }
