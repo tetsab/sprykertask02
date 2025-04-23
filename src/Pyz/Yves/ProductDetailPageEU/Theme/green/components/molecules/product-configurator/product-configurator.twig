@@ -85,8 +85,10 @@
             {% endif %}
 
             {% widget 'CartAddProductAsSeparateItemWidget' only %}{% endwidget %}
+            {% set productName = data.product.name | default %}
+            {% widget 'ProductSocialWidget' args [productName, data.product.url, ['twitter', 'linkedin', 'instagram', 'facebook', 'pinterest']] only %}{% endwidget %}
+            {{ dump('I AM HERE') }}
 
-            {% include molecule('product-social', 'ProductDetailPageDE') %}
         {% endblock %}
     {% endwidget %}
 
