@@ -7,6 +7,6 @@ class TwigConfig extends  SprykerConfig
 
     public function getYvesThemeName(): string
     {
-       return 'default'; // theme color
+       return 'green'; // theme color
     }
 }
