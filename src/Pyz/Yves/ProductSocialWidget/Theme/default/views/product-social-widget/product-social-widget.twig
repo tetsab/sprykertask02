@@ -8,7 +8,7 @@
     <h1> Share this product</h1>
     {# {{ dump(_widget.product) }}
     {{ dump(_widget.socialIcons) }} #}
-    {% include molecule('product-social', 'ProductSocuakWidget') with {
+    {% include molecule('product-social', 'ProductSocialWidget') with {
         data: {
             showTwitter:   'twitter'   in data.socialIcons,
             showInstagram: 'instagram' in data.socialIcons,
