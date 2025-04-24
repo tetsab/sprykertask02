@@ -7,6 +7,7 @@
 
 namespace Pyz\Yves\ShopApplication;
 
+use Pyz\Yves\KittyWidget\Widget\KittyWidget;
 use Pyz\Yves\ProductRelationWidget\Widget\UpSellingProductsWidget;
 use Pyz\Yves\ProductReviewWidget\Widget\ProductDetailPageReviewWidget;
 use Pyz\Yves\ProductSetWidget\Widget\ProductSetIdsWidget;
@@ -216,6 +217,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             ComparisonProductTogglerComparisonListWidget::class,
             LinkToProductComparisonListWidget::class,
             ProductSocialWidget::class,
+            KittyWidget::class,
         ];
     }
 
@@ -244,6 +246,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             ProductSocialWidget::class,
+            KittyWidget::class,
         ];
     }
 
