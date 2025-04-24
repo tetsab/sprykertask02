@@ -87,6 +87,7 @@
             {% widget 'CartAddProductAsSeparateItemWidget' only %}{% endwidget %}
             {% set productName = data.product.name | default %}
             {% widget 'ProductSocialWidget' args [productName, data.product.url, ['twitter', 'linkedin', 'instagram', 'facebook', 'pinterest']] only %}{% endwidget %}
+            {% widget 'KittyWidget' only %}{% endwidget %}
             {{ dump('Product configurator') }}
 
         {% endblock %}
